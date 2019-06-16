@@ -24,7 +24,7 @@ for (company in constituents_vector)
 		str3=paste(str1,str2,sep="")
 		str4="-12-31"
 		str5=paste(str1,str4,sep="")
-		inc_df <- subset(inc_df, startDate == str3 | endDate == str4)
+		inc_df <- subset(inc_df, startDate == str3 | endDate == str5)
 
 		#  Check if the dataframe is empty, if yes skip to next iteratio, else add another column named Company and add the name of the company
 		if(dim(inc_df)[1] == 0)
