@@ -18,7 +18,7 @@ for (company in constituents_vector)
 		blc <- GetBalanceSheet(company, year)
 		# Make a dataframe and extract the needed rows
 		blc_df <- data.frame(blc)  
-		blc_df <- (subset(blc_df, Metric == "Cash and Cash Equivalents, at Carrying Value" | Metric == "Accounts Receivable, Net, Current" | Metric == "Inventory Net" | Metric == "Assets Current" | Metric == "Property Plant And Equipment" | Metric == "Assets" | Metric == "Accounts Payable, Current" | Metric == "Accrued Liabilities, Current" | Metric == "Deferred Revenue, Current" | Metric == "Deferred Revenue, Current" | Metric == "Liabilities, Current" | Metric == "Convertible Notes Payable" | Metric == "Convertible Long Term Notes Payable" | Metric =="Liabilities" | Metric == "Retained Earnings Accumulated Deficit" | Metric == "Stockholders' Equity Attributable to Parent"))
+		blc_df <- (subset(blc_df, Metric == "Cash and Cash Equivalents, at Carrying Value" | Metric == "Accounts Receivable, Net, Current" | Metric == "Inventory" | Metric == "Assets, Current" | Metric == "Property, Plant and Equipment, Gross" | Metric == "Assets" | Metric == "Accounts Payable, Current" | Metric == "Accrued Liabilities and Other Liabilities, Current" | Metric == "Deferred Revenue, Current" | Metric == "Liabilities, Current" | Metric == "Convertible Notes Payable" | Metric == "Convertible Long Term Notes Payable" | Metric =="Liabilities" | Metric == "Retained Earnings (Accumulated Deficit)" | Metric == "Stockholders' Equity Attributable to Parent" | Metric == "Stockholders' Equity Attributable to Noncontrolling Interest" | Metric == "Stockholders' Equity, Including Portion Attributable to Noncontrolling Interest"))
 		str1=year-1 
 		str4="-12-31"
 		str5=paste(str1,str4,sep="")

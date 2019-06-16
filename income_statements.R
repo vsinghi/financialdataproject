@@ -18,7 +18,7 @@ for (company in constituents_vector)
 		inc <- GetIncome(company, year)  # Get income by calling the function of finretortr
 		# Make a dataframe and extract the needed rows
 		inc_df <- data.frame(inc)  
-		inc_df <- (subset(inc_df, Metric == "Revenues" | Metric == "Cost of Goods Sold" | Metric == "Cost of Services" | Metric == "Gross Profit" | Metric == "Research and Development Expense" | Metric == "Selling General And Administrative Expense" | Metric == "Operating Income Loss/ Profit" | Metric == "Earnings Per Share Basic And Diluted" | Metric == "Weighted Average Number Of Share Outstanding Basic And Diluted"))
+		inc_df <- (subset(inc_df, Metric == "Revenues" | Metric == "Cost of Goods Sold" | Metric == "Cost of Services" | Metric == "Gross Profit" | Metric == "Research and Development Expense" | Metric == "Selling, General and Administrative Expense" | Metric == "Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest" | Metric == "Earnings Per Share, Diluted" | Metric == "Earnings Per Share, Basic" | Metric == "Weighted Average Number of Shares Outstanding, Basic" | Metric == "Weighted Average Number of Shares Outstanding, Diluted"))
 		str1=year-1 
 		str2="-01-01"
 		str3=paste(str1,str2,sep="")
@@ -30,7 +30,7 @@ for (company in constituents_vector)
 		if(dim(inc_df)[1] == 0)
 		{
 			next
-		}
+		}Metric == "Weighted Average Number of Shares Outstanding, Basic"
 		else
 		{
 			inc_df <- cbind(Company = company,inc_df)
